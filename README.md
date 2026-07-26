@@ -41,6 +41,7 @@ School-Timetable-Management-System/
 │   ├── src/
 │   │   ├── config/         # DB connection
 │   │   ├── controllers/    # Route logic
+|   |   ├── middleware/     # Request middleware
 │   │   ├── models/         # Mongoose schemas
 │   │   └── routes/         # Express routers
 │   ├── .env.example
@@ -64,8 +65,6 @@ School-Timetable-Management-System/
 │   ├── teachers.js
 │   ├── timetable.js
 │   └── leave.js
-│
-├── screenshots/
 ├── .gitignore
 ├── README.md
 └── LICENSE
@@ -125,16 +124,6 @@ Never commit your real `.env` file — an `.env.example` is provided instead.
 | GET    | /api/timetables               | Get all generated timetables          |
 | GET    | /api/timetables/:className    | Get timetable for a specific class    |
 | DELETE | /api/timetables/:id           | Delete a timetable                    |
-
-## Screenshots
-
-| Login                           | Dashboard                               |
-| ------------------------------- | --------------------------------------- |
-| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) |
-
-| Teachers                              | Timetable                               |
-| ------------------------------------- | --------------------------------------- |
-| ![Teachers](screenshots/teachers.png) | ![Timetable](screenshots/timetable.png) |
 
 ## Future Improvements
 
