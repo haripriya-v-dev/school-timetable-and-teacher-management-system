@@ -65,6 +65,7 @@ School-Timetable-Management-System/
 │   ├── teachers.js
 │   ├── timetable.js
 │   └── leave.js
+│
 ├── .gitignore
 ├── README.md
 └── LICENSE
@@ -138,8 +139,8 @@ Never commit your real `.env` file — an `.env.example` is provided instead.
 
 ## Author
 
-**Your Name**
-[GitHub](https://github.com/<your-username>) · [LinkedIn](https://linkedin.com/in/<your-username>)
+Haripriya
+[GitHub](https://github.com/haripriya-v-dev)
 
 ## License
 
