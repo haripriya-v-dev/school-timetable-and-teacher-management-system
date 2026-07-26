@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="header">
+      <h1>Timetable Studio</h1>
+      <button class="success-btn" onclick="generateTimetable()"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate Timetable</button>
+    </div>
+
+    <div class="table-card" style="margin-bottom:24px;">
+      <h2>Class Schedules</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Class Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="timetableTable"></tbody>
+      </table>
+    </div>
+
+    <div class="table-card" id="timetableContainer" style="display:none;">
+      <h2 id="classTitle"></h2>
+      <div id="timetableView"></div>
+    </div>
+</div>
+
+<script src="api.js"></script>
+<script src="timetable.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjects Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="header">
+      <h1>Subjects Configuration</h1>
+    </div>
+
+    <div class="form-card">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Subject Name</label>
+          <input type="text" id="subjectName" placeholder="e.g. Mathematics">
+        </div>
+        <div class="form-group">
+          <label>Periods / Week</label>
+          <input type="number" id="periodsPerWeek" placeholder="e.g. 5">
+        </div>
+        <div class="form-group">
+          <label>Teacher Capacity</label>
+          <input type="number" id="teacherCapacity" value="30" placeholder="Max capacity">
+        </div>
+        <div class="form-group">
+          <label>Applicable Grades (csv)</label>
+          <input type="text" id="grades" placeholder="1,2,3,4,5">
+        </div>
+        <button onclick="addSubject()"><i class="fa-solid fa-plus"></i> Add Subject</button>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Periods/Week</th>
+            <th>Capacity</th>
+            <th>Grades</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="subjectTable"></tbody>
+      </table>
+    </div>
+</div>
+
+<script src="api.js"></script>
+<script src="subjects.js"></script>
+</body>
+</html>

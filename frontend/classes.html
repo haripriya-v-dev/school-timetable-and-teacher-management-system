@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classes Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="header">
+      <h1>Classes Management</h1>
+    </div>
+
+    <div class="form-card">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="grade">Grade Number</label>
+          <input type="number" id="grade" placeholder="e.g. 5">
+        </div>
+        <div class="form-group">
+          <label for="sections">Sections Count</label>
+          <input type="number" id="sections" placeholder="Sections" value="3">
+        </div>
+        <button onclick="addClass()"><i class="fa-solid fa-plus"></i> Add Class</button>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Grade</th>
+            <th>Sections</th>
+            <th>Periods / Day</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="classTable"></tbody>
+      </table>
+    </div>
+</div>
+
+<script src="api.js"></script>
+<script src="classes.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teachers Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="header">
+      <h1>Teachers Directory</h1>
+    </div>
+
+    <div class="form-card">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Teacher Name</label>
+          <input type="text" id="teacherName" placeholder="Full name">
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" id="teacherSubject" placeholder="Assigned subject">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="teacherEmail" placeholder="Email">
+        </div>
+        <button onclick="addTeacher()"><i class="fa-solid fa-user-plus"></i> Add Teacher</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Total Required</h3>
+        <p id="requiredCount">0</p>
+      </div>
+      <div class="card">
+        <h3>Total Available</h3>
+        <p id="availableCount">0</p>
+      </div>
+      <div class="card">
+        <h3>Total Pending</h3>
+        <p id="pendingCount">0</p>
+      </div>
+    </div>
+
+    <div class="table-card" style="margin-bottom: 30px;">
+      <h2>Requirement Matrix</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Required</th>
+            <th>Available</th>
+            <th>Pending</th>
+          </tr>
+        </thead>
+        <tbody id="requirementTable"></tbody>
+      </table>
+    </div>
+
+    <div class="table-card">
+      <h2>Registered Staff</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="teacherTable"></tbody>
+      </table>
+    </div>
+</div>
+
+<script src="api.js"></script>
+<script src="teachers.js"></script>
+</body>
+</html>

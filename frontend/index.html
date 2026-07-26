@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Timetable System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="header">
+        <h1>Dashboard Overview</h1>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Teachers Required</h3>
+            <p id="requiredTeachers">0</p>
+            <i class="fa-solid fa-user-gear card-icon"></i>
+        </div>
+        <div class="card">
+            <h3>Teachers Available</h3>
+            <p id="availableTeachers">0</p>
+            <i class="fa-solid fa-user-check card-icon"></i>
+        </div>
+        <div class="card">
+            <h3>Teachers Pending</h3>
+            <p id="pendingTeachers">0</p>
+            <i class="fa-solid fa-user-clock card-icon"></i>
+        </div>
+        <div class="card">
+            <h3>Generated Timetables</h3>
+            <p id="generatedTimetables">0</p>
+            <i class="fa-solid fa-calendar-check card-icon"></i>
+        </div>
+    </div>
+
+    <div class="table-card">
+        <h2>Teacher Requirement Analysis</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Required</th>
+                    <th>Available</th>
+                    <th>Pending</th>
+                </tr>
+            </thead>
+            <tbody id="requirementTable"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="api.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

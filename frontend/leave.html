@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="header">
+      <h1>Leave Management</h1>
+    </div>
+
+    <div class="form-card">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Teacher Name</label>
+          <input type="text" id="teacherName" placeholder="Teacher Name">
+        </div>
+        <div class="form-group">
+          <label>From Date</label>
+          <input type="date" id="fromDate">
+        </div>
+        <div class="form-group">
+          <label>To Date</label>
+          <input type="date" id="toDate">
+        </div>
+        <div class="form-group">
+          <label>Reason</label>
+          <input type="text" id="reason" placeholder="Reason for leave">
+        </div>
+        <button onclick="applyLeave()"><i class="fa-solid fa-paper-plane"></i> Apply</button>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Teacher</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Reason</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="leaveTable"></tbody>
+      </table>
+    </div>
+</div>
+
+<script src="api.js"></script>
+<script src="leave.js"></script>
+</body>
+</html>

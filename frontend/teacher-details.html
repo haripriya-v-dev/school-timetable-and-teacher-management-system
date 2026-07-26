@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="header">
+      <h1>Teacher Profile</h1>
+      <button class="primary-btn" onclick="window.location.href='teacher.html'"><i class="fa-solid fa-arrow-left"></i> Back</button>
+    </div>
+
+    <div class="card" style="max-width: 500px;">
+      <div style="display:flex; gap: 20px; align-items:center; margin-bottom: 20px;">
+        <i class="fa-solid fa-circle-user" style="font-size: 4rem; color: var(--primary);"></i>
+        <div>
+          <h2 id="teacherName" style="font-size: 1.4rem;">---</h2>
+          <span id="teacherStatus" class="badge badge-available">---</span>
+        </div>
+      </div>
+      
+      <hr style="border: 0; border-top: 1px solid var(--border); margin-bottom: 20px;">
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <p><strong>Subject Expertise:</strong> <span id="teacherSubject">---</span></p>
+        <p><strong>Contact Email:</strong> <span id="teacherEmail">---</span></p>
+      </div>
+    </div>
+</div>
+
+<script src="api.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  renderSidebar("teachers");
+  loadTeacher();
+});
+
+async function loadTeacher() {
+  const id = localStorage.getItem("teacherId");
+  const response = await fetch(`http://localhost:5000/api/teachers`);
+  const teachers = await response.json();
+  const teacher = teachers.find(t => t._id === id);
+
+  if (!teacher) return;
+
+  document.getElementById("teacherName").innerText = teacher.name;
+  document.getElementById("teacherSubject").innerText = teacher.subject;
+  document.getElementById("teacherEmail").innerText = teacher.email;
+  document.getElementById("teacherStatus").innerText = teacher.status;
+}
+</script>
+
+</body>
+</html>
