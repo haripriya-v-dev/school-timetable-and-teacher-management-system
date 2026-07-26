@@ -1,4 +1,4 @@
-# School Timetable Management System
+# School Timetable and Teacher Management System
 
 A full-stack web application for managing school classes, subjects, teachers, staff leave, and automated timetable generation — built with a vanilla JS frontend and a Node.js/Express/MongoDB backend.
 
@@ -41,7 +41,7 @@ School-Timetable-Management-System/
 │   ├── src/
 │   │   ├── config/         # DB connection
 │   │   ├── controllers/    # Route logic
-|   |   ├── middleware/     # Request middleware
+│   │   ├── middleware/    # Request middleware
 │   │   ├── models/         # Mongoose schemas
 │   │   └── routes/         # Express routers
 │   ├── .env.example
@@ -58,7 +58,7 @@ School-Timetable-Management-System/
 │   ├── timetable.html
 │   ├── leave.html
 │   ├── style.css
-│   ├── api.js               # Shared fetch helper, toasts, modal, sidebar
+│   ├── api.js               # Commom API Requests
 │   ├── dashboard.js
 │   ├── classes.js
 │   ├── subjects.js
@@ -74,7 +74,7 @@ School-Timetable-Management-System/
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/School-Timetable-Management-System.git
+git clone https://github.com/haripriya-v-dev/School-Timetable-Management-System.git
 cd School-Timetable-Management-System/backend
 npm install
 ```
@@ -139,7 +139,7 @@ Never commit your real `.env` file — an `.env.example` is provided instead.
 
 ## Author
 
-Haripriya
+**Haripriya V**
 [GitHub](https://github.com/haripriya-v-dev)
 
 ## License
