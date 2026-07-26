@@ -35,7 +35,7 @@ Admins can register classes and subjects, onboard teachers, and generate a weekl
 ## Project Structure
 
 ```
-School-Timetable-Management-System/
+TT/
 │
 ├── backend/
 │   ├── src/
@@ -75,7 +75,7 @@ School-Timetable-Management-System/
 
 ```bash
 git clone https://github.com/haripriya-v-dev/School-Timetable-Management-System.git
-cd School-Timetable-Management-System/backend
+cd TT/backend
 npm install
 ```
 
